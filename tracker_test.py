@@ -3,22 +3,22 @@ import cv2
 import time
 
 from lib.utils import get_img_list,get_ground_truthes,APCE,PSR
-from cftracker.mosse import MOSSE
-from cftracker.csk import CSK
-from cftracker.kcf import KCF
-from cftracker.cn import CN
-from cftracker.dsst import DSST
+#from cftracker.mosse import MOSSE
+#from cftracker.csk import CSK
+#from cftracker.kcf import KCF
+#from cftracker.cn import CN
+#from cftracker.dsst import DSST
 from cftracker.staple import Staple
-from cftracker.dat import DAT
-from cftracker.eco import ECO
-from cftracker.bacf import BACF
-from cftracker.csrdcf import CSRDCF
-from cftracker.samf import SAMF
-from cftracker.ldes import LDES
-from cftracker.mkcfup import MKCFup
-from cftracker.strcf import STRCF
-from cftracker.mccth_staple import MCCTHStaple
-from lib.eco.config import otb_deep_config,otb_hc_config
+#from cftracker.dat import DAT
+#from cftracker.eco import ECO
+#from cftracker.bacf import BACF
+#from cftracker.csrdcf import CSRDCF
+#from cftracker.samf import SAMF
+#from cftracker.ldes import LDES
+#from cftracker.mkcfup import MKCFup
+#from cftracker.strcf import STRCF
+#from cftracker.mccth_staple import MCCTHStaple
+#from lib.eco.config import otb_deep_config,otb_hc_config
 from cftracker.config import staple_config,ldes_config,dsst_config,csrdcf_config,mkcf_up_config,mccth_staple_config
 
 cap = cv2.VideoCapture('/media/s-kulikov/44F2BB9AF2BB8F24/my-work/FPV/DATA/123.mp4')

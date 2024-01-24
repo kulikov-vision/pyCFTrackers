@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from lib.eco.features.features import fhog,TableFeature
+from lib.eco.features.features import fhog#,TableFeature
 
 
 def extract_hog_feature(img, cell_size=4):
@@ -21,7 +21,7 @@ def extract_pyhog_feature(img, cell_size=4):
         (size_patch[0],size_patch[1], size_patch[2]))
     return FeaturesMap
 
-
+'''
 def extract_cn_feature(img,cell_size=1):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY).astype(np.float32) / 255 - 0.5
     cn = TableFeature(fname='cn', cell_size=cell_size, compressed_dim=11, table_name="CNnorm",
@@ -58,7 +58,7 @@ def extract_cn_feature_byw2c(patch, w2c):
     out=np.concatenate((gray,out),axis=2)
     return out
 
-
+'''
 
 
 

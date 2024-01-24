@@ -1,11 +1,10 @@
-import mxnet as mx
+#import mxnet as mx
 import numpy as np
 import pickle
 import os
 import cv2
-from mxnet.gluon.model_zoo import vision
-from mxnet.gluon.nn import AvgPool2D
-import mxnet as mx
+#from mxnet.gluon.model_zoo import vision
+#from mxnet.gluon.nn import AvgPool2D
 
 from ..config import gpu_config
 from . import _gradient
@@ -75,6 +74,7 @@ class Feature:
             x = np.sign(x) * np.sqrt(np.abs(x))
         return x.astype(np.float32)
 
+'''
 class CNNFeature(Feature):
     def __init__(self,config=otb_hc_config.OTBHCConfig()):
         super(CNNFeature,self).__init__(config)
@@ -205,7 +205,7 @@ class VGG16Feature(CNNFeature):
         pool4 = self._vgg16.features[23].forward(relu4_3) # x16
         return [pool_avg.asnumpy().transpose(2, 3, 1, 0),
                 pool4.asnumpy().transpose(2, 3, 1, 0)]
-
+'''
 
 def fhog(I, bin_size=8, num_orients=9, clip=0.2, crop=False):
     soft_bin = -1
